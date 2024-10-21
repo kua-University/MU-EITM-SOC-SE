@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration System Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4285F4;
+            color: white;
+            text-decoration: none;
+            width: 200px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to the Student Registration System</h1>
+<h2>Dashboard</h2>
+
+<nav>
+    <ul>
+    <li><a th:href="@{/add-course}">Add Course</a></li>
+    <li><a th:href="@{/add-payment}">Add Payment</a></li>
+    <li><a th:href="@{/add-registration}">Add Registration</a></li>
+    <li><a th:href="@{/add-user}">Add User</a></li>
+    <li><a th:href="@{/course-list}">Course List</a></li>
+    <li><a th:href="@{/payment-list}">Payment List</a></li>
+</ul>
+</nav>
+</body>
+</html>

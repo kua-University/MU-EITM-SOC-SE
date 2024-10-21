@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Payment List</title>
+</head>
+<body>
+<h2>Payment List</h2>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>Status</th>
+    </tr>
+    <tr th:each="payment : ${payments}">
+        <td th:text="${payment.amount}">Amount</td>
+        <td th:text="${payment.status}">Status</td>
+    </tr>
+</table>
+<a href="/payments/add">Add Payment</a>
+</body>
+</html>
