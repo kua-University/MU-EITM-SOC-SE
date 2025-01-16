@@ -14,9 +14,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
 @Controller
 public class FunctionalityController {
 
@@ -82,7 +82,8 @@ public class FunctionalityController {
     public String savePayment(@RequestParam double paymentAmount, @RequestParam String paymentDate, @RequestParam String studentId) {
         Payment payment = new Payment();
         payment.setAmount(paymentAmount);
-        payment.setStatus("PENDING"); // Set default status
+        payment.setStatus("PENDING");
+       // Set default status
         // Add logic to link Payment with Registration/Student (if needed)
         paymentService.savePayment(payment);
         return "redirect:/payment-list";

@@ -18,8 +18,8 @@ public class Payment {
     private String status; // e.g., PAID, PENDING, etc.
 
     @ManyToOne
-    @JoinColumn(name = "registration_id")  // Maps to the 'registration_id' column (foreign key)
-    private Registration registration;
+    @JoinColumn(name = "user-id")  // Maps to the 'registration_id' column (foreign key)
+    private User user    ;
 
     // Getters and Setters
     public String getStatus() {
@@ -38,12 +38,12 @@ public class Payment {
         this.amount = amount;
     }
 
-    public Registration getRegistration() {
-        return registration;
+    public User getUser() {
+        return user;
     }
 
-    public void setRegistration(Registration registration) {
-        this.registration = registration;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Long getId() {

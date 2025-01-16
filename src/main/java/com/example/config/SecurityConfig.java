@@ -21,7 +21,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()) // Updated way to disable CSRF in Spring Security 6.1+
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/login", "/register").permitAll()
+                        .requestMatchers("/login", "/register","/payments").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form
